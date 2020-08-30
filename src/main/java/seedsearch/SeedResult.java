@@ -111,6 +111,9 @@ public class SeedResult {
         if(numElites < settings.minimumElites) {
             return false;
         }
+        if (!getAllCardIds().containsAll(settings.requiredCards)) {
+            return false;
+        }
         if (!events.containsAll(settings.requiredEvents)) {
             return false;
         }
@@ -134,7 +137,7 @@ public class SeedResult {
         return true;
     }
 
-    private ArrayList<String> getAllCardIds() {
+    public ArrayList<String> getAllCardIds() {
         ArrayList<String> allCards = new ArrayList<>();
         for (Reward reward : cardRewards) {
             for (AbstractCard card : reward.cards) {
@@ -150,6 +153,10 @@ public class SeedResult {
             allCards.add(card.cardID);
         }
         return allCards;
+    }
+
+    public ArrayList<String> getAllRelicIds() {
+        return relics;
     }
 
     private static String removeTextFormatting(String text) {

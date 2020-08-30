@@ -27,6 +27,10 @@ Some settings take lists of relics, cards, or events. For these settings, either
 * **playerClass**: The class used to search (IRONCLAD, THE_SILENT, or DEFECT)
 * **startSeed**: The first seed to search
 * **endSeed**: The last seed to search
+* **findExtras**: Searches for cards and relics that should not be in the full library
+* **findMissingCards**: Searches for cards that should be in the full library but are not
+* **findMissingRelics**: Searches for relics that should be in the full library but are not
+* **endlessSearch**: Continues to search until at least one successful seed is found
 * **verbose**: Whether to print out detailed information about each seed found
 * **exitAfterSearch** Set to true to cause the program to immediately exit after search every seed
 
@@ -92,6 +96,7 @@ These options control the criteria for deciding which seeds are selected as vali
 
 * **requiredAct1Cards**: The cards which must be present somewhere in Act 1
 * **requiredAct1Relics**: The relics which must be acquired somewhere in Act 1
+* **requiredCards**: The cards which must be acquired anywhere in the run
 * **requiredRelics**: The relics which must be acquired anywhere in the run
 * **requiredEvents**: The events which must be encountered somewhere in the run
 * **requiredCombats**: The combats which must be encountered somewhere in the run (e.g. "The Champ")

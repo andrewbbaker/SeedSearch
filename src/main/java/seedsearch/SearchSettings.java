@@ -1,3 +1,4 @@
+
 package seedsearch;
 
 import com.google.gson.Gson;
@@ -23,6 +24,10 @@ public class SearchSettings {
     public AbstractPlayer.PlayerClass playerClass = AbstractPlayer.PlayerClass.IRONCLAD;
     public long startSeed = 0L;
     public long endSeed = 100L;
+    public boolean findExtras = false;
+    public boolean findMissingCards = false;
+    public boolean findMissingRelics = false;
+    public boolean endlessSearch = false;
     public boolean verbose = true;
     public boolean exitAfterSearch = false;
 
@@ -82,6 +87,7 @@ public class SearchSettings {
 
     public ArrayList<String> requiredAct1Cards = new ArrayList<>();
     public ArrayList<String> requiredAct1Relics = new ArrayList<>();
+    public ArrayList<String> requiredCards = new ArrayList<>();
     public ArrayList<String> requiredRelics = new ArrayList<>();
     public ArrayList<String> requiredEvents = new ArrayList<>();
     public ArrayList<String> requiredCombats = new ArrayList<>();
@@ -143,6 +149,7 @@ public class SearchSettings {
         ArrayList<ArrayList<String>> cardLists = new ArrayList<>();
         cardLists.add(cardsToBuy);
         cardLists.add(requiredAct1Cards);
+        cardLists.add(requiredCards);
 
         ArrayList<ArrayList<String>> eventLists = new ArrayList<>();
         eventLists.add(requiredEvents);
